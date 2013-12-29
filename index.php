@@ -19,4 +19,8 @@
 	}		
 ?>
 </ul>
+<h2>Meta</h2>
+<ul>
+	<li><a href="admin/index.php">Admin</a></li>
+</ul>
 
