@@ -1,5 +1,5 @@
 <?php
-$json = file_get_contents("RadioStations.json");
+$json = file_get_contents("Data/RadioStations.json");
 
 $decodedStations = json_decode($json);
 
