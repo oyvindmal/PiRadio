@@ -3,7 +3,7 @@ include("RadioStations.php");
 
 foreach($decodedStations as $station) 
 {
-	echo $station->ID;
+	echo AddLeadingZeros($station->ID);
 	echo " - ";
 	echo $station->Title;
 	echo "\r\n";
@@ -13,7 +13,11 @@ foreach($decodedStations as $station)
 function AddLeadingZeros($input)
 {
 $number = $input;
-
-
+$length = strlen($number);
+if($length == 1) 
+{
+	$number = "0" . $number;
+}
+return $number;
 }
 ?>
