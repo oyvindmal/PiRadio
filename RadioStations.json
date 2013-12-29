@@ -1,0 +1,49 @@
+[
+	{
+		"ID" : 1,
+		"Title" : "NRK P1 Finnmark", 
+		"URL" : "http://lyd.nrk.no/nrk_radio_p1_finnmark_mp3_h.m3u"
+	},
+	{
+		"ID" : 2,
+                "Title" : "NRK P1 Østlandssendingen",
+                "URL" : "http://lyd.nrk.no/nrk_radio_p1_ostlandssendingen_mp3_h.m3u"
+        },
+	{
+		"ID" : 3,
+                "Title" : "NRK Alltid Nyheter",
+                "URL" : "http://lyd.nrk.no/nrk_radio_alltid_nyheter_mp3_h.m3u"
+        },
+        {
+		"ID" : 4,
+                "Title" : "P4",
+                "URL" : "http://mms-live.online.no/p4_norge_mp3_hq.m3u"
+        },
+        {
+		"ID" : 5,
+                "Title" : "P5 Oslo",
+                "URL" : "http://mms-live.online.no/P5_Oslo.m3u"
+        },
+        {
+		"ID" : 6,
+                "Title" : "Radio Alta",
+                "URL" : "http://lyd.radioalta.no/radioalta-128k.m3u"
+        },
+        {
+		"ID" : 7,
+                "Title" : "Radio Norge",
+                "URL" : "http://stream.sbsradio.no:8000/radionorge.mp3.m3u"
+        },
+        {
+		"ID" : 8,
+                "Title" : "Radio 1 Oslo",
+                "URL" : "http://stream.sbsradio.no:8000/radio1oslo.mp3.m3u"
+        },
+	{
+		"ID" : 9,
+                "Title" : "OnAirRadio",
+                "URL" : "http://onairradio.no/webplayer/lytte.m3u"
+        }
+
+
+]
