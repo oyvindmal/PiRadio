@@ -18,5 +18,8 @@ foreach($xml->information->category[0]->info as $val) {
 }
 
 echo "<p><strong>" . $stationName . "</strong></p>";
-echo "<p>" . $stationNowPlaying . "</p>";
+if($stationNowPlaying != "") 
+{
+	echo "<p>" . $stationNowPlaying . "</p>";
+}
 ?>
