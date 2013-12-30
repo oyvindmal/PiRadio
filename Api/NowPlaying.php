@@ -1,17 +1,21 @@
 <?php
-exec("sh /var/www/PiRadio/RadioScripts/Title.sh | tee /var/www/PiRadio/Data/NowPlaying");
-$file = file_get_contents("/var/www/PiRadio/Data/NowPlaying");
-$arr = explode("get_title", $file);
-echo $arr[1];
-echo JSONify($arr[1]);
+$file = file_get_contents("http://192.168.1.190:8080/requests/status.xml");
 
-function JSONify($input) 
-{
-	str_replace("\r\n", $input);
+$xml = new SimpleXMLElement($file);
+$station->Name = "";
+$station->NowPlaying = "";
+foreach($xml->information->category[0]->info as $val) {
+	$attr = $val['name'];
+	if($attr == "title") 
+	{
+		$station->Name = (string) $val;
+	}
 
-	$stream->Title = $input;
-	return $input;
-//	return json_encode($stream);
+	if($attr == "now_playing") 
+	{
+		$station->NowPlaying = (string)  $val;
+	}
 }
 
+echo json_encode($station);
 ?>
