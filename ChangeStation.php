@@ -7,7 +7,8 @@ if(is_numeric($stationID))
 	{
 		if($station->ID == $stationID) 
 		{
-			exec("sh /var/www/PiRadio/RadioScripts/ChangeChannel.sh " . $station->URL);
+			$temp2 = file_get_contents("http://127.0.0.1:8080/requests/status.xml?command=pl_empty");
+			$temp = file_get_contents("http://127.0.0.1:8080/requests/status.xml?command=in_play&input=" . $station->URL);
 			break;
 		}
 	}
