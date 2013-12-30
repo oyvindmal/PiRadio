@@ -1,4 +1,4 @@
 <?php
-exec("sh /var/www/RadioScripts/Stop.sh");
+exec("sh /var/www/PiRadio/RadioScripts/Stop.sh");
 header("Location: index.php");
 ?>

@@ -7,7 +7,7 @@ if(is_numeric($stationID))
 	{
 		if($station->ID == $stationID) 
 		{
-			exec("sh /var/www/RadioScripts/ChangeChannel.sh " . $station->URL);
+			exec("sh /var/www/PiRadio/RadioScripts/ChangeChannel.sh " . $station->URL);
 			break;
 		}
 	}

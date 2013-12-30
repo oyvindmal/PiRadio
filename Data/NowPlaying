@@ -1,0 +1,9 @@
+spawn telnet localhost 4212
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+VLC media player 2.0.8 Twoflower
+Password: 
+Welcome, Master
+> get_title
+NRK P1 Østlandssendingen
