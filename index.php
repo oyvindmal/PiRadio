@@ -1,6 +1,6 @@
 <h1>RadioControls</h1>
 <h2>Currently Playing</h2>
-<p>Not implemented</p>
+<p><?php include("NowPlaying.php"); ?></p>
 <h2>Controls</h2>
 <ul>
 	<li><a href="Play.php">Play</a></li>

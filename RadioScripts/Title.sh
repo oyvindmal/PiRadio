@@ -9,5 +9,6 @@ send "\r"
 expect "Welcome, Master"
 send "get_title\r"
 expect "get_title\r"
+sleep 0.7
 send "logout\n"
 EOF
