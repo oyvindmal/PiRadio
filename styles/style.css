@@ -1,14 +1,29 @@
 body 
 {
-	background:#7BAD18;
-	font-family:sans-serif;
+	background:#fff;
+	font-family:sans-serif; 
+	font-size:0.8em;
 }
 
+#box
+{
+	padding:10px;
+	background:#83BA1F;
+	width:500px;
+}
+
+#heading {
+	width:480px;
+	padding:10px;
+	background:#91D100;
+	margin-bottom:10px;
+}
 #metadata 
 {
 	width:500px;
-	background: #C69408;
+	background: #91D100;
 	display:block;
+	margin-bottom:10px;
 }
 
 #stationImage 
@@ -39,11 +54,11 @@ body
 #stationList li a 
 {
 	display:inline-block;
-	background:#008287;
+	background:#94BD4A;
 	text-decoration:none;
 	color:#000;	
 	padding:5px 15px 5px 15px;
-	font-size:0.7em;
+	font-size:0.9em;
 	height:50px;
 }
 
@@ -56,11 +71,43 @@ body
 #playerControls li a
 {
         display:inline-block;
-        background:#008287;
+        background:#94BD4A;
         text-decoration:none;
         color:#000;
         padding:5px 15px 5px 15px;
-        font-size:0.7em;
+        font-size:0.9em;
         height:50px;
+}
+
+#controlsbox 
+{
+	width:480px;
+	padding:10px;
+	background: #91D100;
+	margin-bottom:10px;
+}
+
+#stationsbox
+{
+	width:480px;
+	padding:10px;
+	background: #91D100;
+	margin-bottom:10px;
+}
+
+#meta 
+{
+	position:absolute;
+	top:0;
+	right:0;
+	padding:5px;
+	background: #83BA1F;
+}
+
+#meta a 
+{
+	text-decoration:none;
+	font-size:0.9em;
+	color: #000;
 }
 
