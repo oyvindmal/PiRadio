@@ -1,4 +1,4 @@
 <?php
-exec("sh /var/www/PiRadio/RadioScripts/Play.sh");
+$temp = file_get_contents("http://127.0.0.1:8080/requests/status.xml?command=pl_play");
 header("Location: index.php");
 ?>
