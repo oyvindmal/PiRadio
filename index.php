@@ -5,6 +5,7 @@ $(document).ready(
 	function () 
 	{ 
 		LoadNowPlaying();
+		LoadStationList();
 		setInterval(
 		function () 
 			{ 
@@ -18,6 +19,39 @@ $(document).ready(
 		{ 
 			$("#stationName").text(data.Name);
 			$("#nowPlaying").text(data.NowPlaying);
+		});
+	}
+
+	function LoadStationList()
+	{
+		$.getJSON( "Api/RadioStations.php",
+		function (data)
+		{
+			var output = $("#stationsBox");
+			$(data).each(
+			function () 
+			{
+				var id = this.ID;
+				var a = $("<a>").click(
+				function () 
+				{
+					var apiurl = "Api/ChangeStation.php?id=" + id;
+					$.getJSON( apiurl,
+					function(data) 
+					{	
+						LoadNowPlaying();
+						console.log("changed");
+					});
+					
+				});
+				a.html(this.Title);
+				
+				a.appendTo(output);
+				
+			});
+			
+			console.log(output);
+//			$("#stationsBox").html(output);
 		});
 	}
 </script>
@@ -47,18 +81,6 @@ $(document).ready(
                  </ul>
 	</div>
 	<div id="stationsBox">
-		<ul id="stationList">
-			<?php
-		         include("RadioStations.php");
-		         foreach($decodedStations as $station)
-       			 {
-                		echo "<li>";
-		                echo "<p><a href=\"ChangeStation.php?id=" . $station->ID  . "\">" . $station->Title . "</a></p>";
-                		echo "</li>";
- 			 }
-			?>
-		</ul>
-
 	</div>
 
 </div>

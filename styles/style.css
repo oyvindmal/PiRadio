@@ -45,14 +45,10 @@ body
 	font-weight:bold;
 }
 
-#stationList li
-{
-	display:inline-block;
-	margin:3px;
-}
 
-#stationList li a 
+#stationsBox  a 
 {
+	margin: 5px 5px 0 0;
 	display:inline-block;
 	background:#94BD4A;
 	text-decoration:none;
