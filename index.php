@@ -6,6 +6,27 @@ $(document).ready(
 	{ 
 		LoadNowPlaying();
 		LoadStationList();
+		
+		$("#btnStop").click(
+		function ()
+		{
+			$.getJSON("Api/Stop.php",
+			function () 
+			{
+				
+			});
+		});
+		
+		$("#btnPlay").click(
+                function ()
+                {
+                        $.getJSON("Api/Play.php",
+                        function ()
+                        {
+
+                        });
+                });
+
 		setInterval(
 		function () 
 			{ 
@@ -75,10 +96,9 @@ $(document).ready(
 		<div style="clear:both;"></div>
 	</div>
 	<div id="controlsBox">
-		<ul id="playerControls">
-                	<li><a href="Play.php">Play</a></li>
-	                <li><a href="Stop.php">Stop</a></li>
-                 </ul>
+		<a id="btnPlay">Play</a>
+	        <a id="btnStop">Stop</a>
+                
 	</div>
 	<div id="stationsBox">
 	</div>
