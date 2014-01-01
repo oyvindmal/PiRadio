@@ -4,7 +4,6 @@ PiRadio makes you able to run a headless internet radio player on for example yo
 
 ## Dependencies
 * VLC MediaPlayer (apt-get install vlc)
-* Expect (apt-get install expect)
 * Apache2 (apt-get install apache2)
 * PHP5 (apt-get install php5)
 * PHP5 - JSON (apt-get install php5-json)
